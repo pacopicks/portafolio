@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# reference files (not part of the app source)
+photography-portfolio-v1.zip
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
