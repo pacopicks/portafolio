@@ -263,12 +263,15 @@ export default function IntroAnimation() {
             <div className="flex h-full w-full flex-col items-center justify-center perspective-1000">
 
                 {/* Intro Text (Fades out) */}
-                <div className="absolute z-0 flex flex-col items-center justify-center text-center pointer-events-none top-1/2 -translate-y-1/2">
+                {/* Sits above the ring on narrow screens (where a 20-image circle
+                    leaves no clear space at its own center) and reverts to the
+                    original vertically-centered placement from md up. */}
+                <div className="absolute z-0 flex flex-col items-center justify-center text-center pointer-events-none px-6 top-[14%] md:top-1/2 md:-translate-y-1/2">
                     <motion.h1
                         initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                         animate={introPhase === "circle" && morphValue < 0.5 ? { opacity: 1 - morphValue * 2, y: 0, filter: "blur(0px)" } : { opacity: 0, filter: "blur(10px)" }}
                         transition={{ duration: 1 }}
-                        className="text-2xl font-medium tracking-tight text-foreground md:text-4xl"
+                        className="text-xl font-medium tracking-tight text-foreground md:text-4xl"
                     >
                         Cada foto cuenta una historia.
                     </motion.h1>
@@ -317,7 +320,7 @@ export default function IntroAnimation() {
                             const minDimension = Math.min(containerSize.width, containerSize.height);
 
                             // A. Calculate Circle Position
-                            const circleRadius = Math.min(minDimension * 0.35, 350);
+                            const circleRadius = Math.min(minDimension * (isMobile ? 0.3 : 0.35), 350);
 
                             const circleAngle = (i / TOTAL_IMAGES) * 360;
                             const circleRad = (circleAngle * Math.PI) / 180;
