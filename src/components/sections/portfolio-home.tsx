@@ -30,16 +30,16 @@ export function PortfolioHome() {
             <div className="flex gap-4 items-center">
               <div className="size-14 rounded-full bg-neutral-300 dark:bg-neutral-700 shrink-0" />
               <div>
-                <h1 className="text-lg font-medium">[Nombre del estudiante]</h1>
+                <h1 className="text-lg font-medium">Francisco</h1>
                 <p className="text-sm text-muted-foreground">
-                  Fotógrafo/a en formación
+                  Fotógrafo
                 </p>
               </div>
             </div>
             <p className="text-muted-foreground text-[15px]">
-              Estudiante de fotografía interesado/a en retrato, calle y
-              paisaje. Reemplaza este texto con tu propia historia: dónde
-              estudias, tu estilo y qué te gusta capturar.
+              Me dedico a capturar momentos honestos a través del retrato, la
+              calle y el paisaje, siempre buscando la luz natural y las
+              historias que hay detrás de cada escena.
             </p>
           </div>
 

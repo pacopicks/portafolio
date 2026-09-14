@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portafolio de Fotografía",
-  description: "Portafolio del trabajo fotográfico de [Nombre del estudiante]",
+  title: "Francisco — Fotografía",
+  description: "Portafolio del trabajo fotográfico de Francisco",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
